@@ -6,7 +6,7 @@
 /*   By: dohanyan <dohanyan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 20:55:11 by dohanyan          #+#    #+#             */
-/*   Updated: 2023/06/14 18:36:09 by dohanyan         ###   ########.fr       */
+/*   Updated: 2023/06/15 15:44:26 by dohanyan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,7 @@ char	*get_next_line(int fd)
 	if (val < 0)
 		return (NULL);
 	result = (ft_parc1(buf));
-	buf = ft_parc_buf(buf);
+	if (result)
+		buf = ft_parc_buf(buf);
 	return (result);
 }
